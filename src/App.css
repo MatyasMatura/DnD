@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  margin-left: 5px;
+}
+
+.dragging{
+  color: red;
 }
 
 .App-logo {

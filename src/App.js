@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { DndProvider } from 'react-dnd';
+import List from "./components/List";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <DndProvider backend={HTML5Backend}>
+        <div className="App">
+          <h1>DND Example</h1>
+          <h2>První list</h2>
+          <List content={["Jedna","dvě","Honza","jde"]} />
+          <h2>Druhý list</h2>
+          <List content={["Tři","čtyři","někam","míří"]} />
+        </div>
+      </DndProvider>
   );
 }
 
